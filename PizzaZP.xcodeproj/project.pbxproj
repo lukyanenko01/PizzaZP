@@ -18,6 +18,11 @@
 		F2FF4391296F480D009095AD /* PizzaZPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF4390296F480D009095AD /* PizzaZPTests.swift */; };
 		F2FF439B296F480D009095AD /* PizzaZPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF439A296F480D009095AD /* PizzaZPUITests.swift */; };
 		F2FF439D296F480D009095AD /* PizzaZPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF439C296F480D009095AD /* PizzaZPUITestsLaunchTests.swift */; };
+		F2FF43AA296F4F06009095AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2FF43A9296F4F06009095AD /* GoogleService-Info.plist */; };
+		F2FF43AD296F4FFA009095AD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2FF43AC296F4FFA009095AD /* FirebaseAuth */; };
+		F2FF43AF296F4FFA009095AD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F2FF43AE296F4FFA009095AD /* FirebaseDatabase */; };
+		F2FF43B1296F4FFA009095AD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F2FF43B0296F4FFA009095AD /* FirebaseFirestore */; };
+		F2FF43B3296F4FFA009095AD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F2FF43B2296F4FFA009095AD /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,7 @@
 		F2FF4396296F480D009095AD /* PizzaZPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzaZPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2FF439A296F480D009095AD /* PizzaZPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaZPUITests.swift; sourceTree = "<group>"; };
 		F2FF439C296F480D009095AD /* PizzaZPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaZPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F2FF43A9296F4F06009095AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F6ECCCCA27A21962F68FC713 /* Pods-PizzaZP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaZP.release.xcconfig"; path = "Target Support Files/Pods-PizzaZP/Pods-PizzaZP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +72,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FF43AF296F4FFA009095AD /* FirebaseDatabase in Frameworks */,
+				F2FF43B1296F4FFA009095AD /* FirebaseFirestore in Frameworks */,
 				D8EFC5EADE0A07DD167A323B /* Pods_PizzaZP.framework in Frameworks */,
+				F2FF43B3296F4FFA009095AD /* FirebaseStorage in Frameworks */,
+				F2FF43AD296F4FFA009095AD /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +119,6 @@
 				C922E548E778E181ADEF65C6 /* Pods-PizzaZPTests.debug.xcconfig */,
 				91532FD5C4753B60E0813692 /* Pods-PizzaZPTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,6 +153,7 @@
 				F2FF4382296F480C009095AD /* Assets.xcassets */,
 				F2FF4384296F480C009095AD /* LaunchScreen.storyboard */,
 				F2FF4387296F480C009095AD /* Info.plist */,
+				F2FF43A9296F4F06009095AD /* GoogleService-Info.plist */,
 			);
 			path = PizzaZP;
 			sourceTree = "<group>";
@@ -183,6 +193,12 @@
 			dependencies = (
 			);
 			name = PizzaZP;
+			packageProductDependencies = (
+				F2FF43AC296F4FFA009095AD /* FirebaseAuth */,
+				F2FF43AE296F4FFA009095AD /* FirebaseDatabase */,
+				F2FF43B0296F4FFA009095AD /* FirebaseFirestore */,
+				F2FF43B2296F4FFA009095AD /* FirebaseStorage */,
+			);
 			productName = PizzaZP;
 			productReference = F2FF4376296F480A009095AD /* PizzaZP.app */;
 			productType = "com.apple.product-type.application";
@@ -258,6 +274,9 @@
 				Base,
 			);
 			mainGroup = F2FF436D296F480A009095AD;
+			packageReferences = (
+				F2FF43AB296F4FFA009095AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F2FF4377296F480A009095AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -275,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2FF4386296F480C009095AD /* LaunchScreen.storyboard in Resources */,
+				F2FF43AA296F4F06009095AD /* GoogleService-Info.plist in Resources */,
 				F2FF4383296F480C009095AD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,6 +767,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F2FF43AB296F4FFA009095AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F2FF43AC296F4FFA009095AD /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2FF43AB296F4FFA009095AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F2FF43AE296F4FFA009095AD /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2FF43AB296F4FFA009095AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		F2FF43B0296F4FFA009095AD /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2FF43AB296F4FFA009095AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		F2FF43B2296F4FFA009095AD /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2FF43AB296F4FFA009095AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F2FF436E296F480A009095AD /* Project object */;
 }
